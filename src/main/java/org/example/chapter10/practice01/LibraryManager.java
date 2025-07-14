@@ -17,7 +17,7 @@ public class LibraryManager implements Manageable {
 
     @Override
     public void listAll() {
-        // 전체 조회: isEmpty()로 요소갑 ㅅ존재 여부 확인에 따라 로직을 처리
+        // 전체 조회: isEmpty()로 요소값 존재 여부 확인에 따라 로직을 처리
         if (items.isEmpty()) {
             System.out.println("No items in the library");
         } else {
@@ -33,6 +33,7 @@ public class LibraryManager implements Manageable {
         for (Item item: items) {
 //            item.updatestock(); 불가능
             if (item.getID().equals(id) && item instanceof Book) {
+//
 //                Book selectedBook = (Book)item; // 다운캐스팅
 
                 ((Book)item).updateStock(quantity);
@@ -131,7 +132,7 @@ public class LibraryManager implements Manageable {
         if (result.isEmpty()) {
             throw new NoSuchElementException("No item found for range: " + minPrice + "~" + maxPrice);
         }
-        
+
         return result;
     }
 }
