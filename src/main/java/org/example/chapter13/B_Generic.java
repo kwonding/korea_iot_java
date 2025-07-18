@@ -13,7 +13,7 @@ package org.example.chapter13;
 import java.util.ArrayList;
 import java.util.List;
 
-class Bastket<T> {
+class Basket<T> {
     private T item;
 
     public void setItem (T item) {
@@ -38,13 +38,13 @@ class Message<T> {
 
 public class B_Generic {
     public static void main(String[] args) {
-        Bastket<String> stringBastket = new Bastket<>(); // 글자를 담는 바구니
-        stringBastket.setItem("사과");
-        System.out.println(stringBastket.getItem()); // 사과
+        Basket<String> stringBasket = new Basket<>(); // 글자를 담는 바구니
+        stringBasket.setItem("사과");
+        System.out.println(stringBasket.getItem()); // 사과
 
-        Bastket<Integer> integerBastket = new Bastket<>(); // 숫자를 담는 바구니
-        integerBastket.setItem(777);
-        System.out.println(integerBastket.getItem()); // 777
+        Basket<Integer> integerBasket = new Basket<>(); // 숫자를 담는 바구니
+        integerBasket.setItem(777);
+        System.out.println(integerBasket.getItem()); // 777
 
         // == 1) 기본 와일드 카드 <?> == //
         // : 모든 타입이 지정 가능한 클래스 타입

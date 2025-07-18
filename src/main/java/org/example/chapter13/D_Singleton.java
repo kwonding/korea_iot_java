@@ -96,7 +96,7 @@ public class D_Singleton {
         System.out.println(principal3);
         System.out.println(principal4);
 
-        // org.example.chapter13.SchoolPrincipal@3b07d329
+        // 모두 org.example.chapter13.SchoolPrincipal@3b07d329
 
         Example example1 = new Example();
         Example example2 = new Example();
