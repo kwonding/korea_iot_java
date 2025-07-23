@@ -23,7 +23,7 @@ public class BoardController {
 
         }else {
             // 게시글 등록 X
-            System.out.println("입력ㄱ밧이 유효하지 않습니다.");
+            System.out.println("입력 값이 유효하지 않습니다.");
         }
     }
 
