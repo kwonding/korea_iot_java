@@ -27,7 +27,11 @@ public class HealthRecordController {
         return healthRecordService.filterRecordsByDiagnosis(diagnosis);
     }
 
-    public void deleteRecord(long id) {
-        healthRecordService.deleteRecord(id);
+//    public void deleteRecord(long id) {
+//        healthRecordService.deleteRecord(id);
+//    } - void를 boolean으로 바꾸고싶었음 // 삭제가 완료되었습니다를 반환하고싶어서
+
+    public boolean deleteRecord(long id) {
+        return healthRecordService.deleteRecord(id);
     }
 }

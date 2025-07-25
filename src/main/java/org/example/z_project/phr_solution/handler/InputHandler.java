@@ -26,7 +26,7 @@ public class InputHandler {
         System.out.print(prompt + ": ");
         String input = sc.nextLine().trim(); // .trim(): 문자열 양쪽 공백 제거
 
-        if(input.isEmpty()) {
+        if(!input.isEmpty()) {
             return input;
         }
             System.out.println("입력값을 비워둘 수 없습니다. 다시 입력해주세요.");
@@ -87,10 +87,10 @@ public class InputHandler {
 
         try{
             long patientId = getIdInput();
-            String dateOfVisit = getInput("방문 날짜를 입력하세요(예: 2025-07-25");
+            String dateOfVisit = getInput("방문 날짜를 입력하세요(예: 2025-07-25)");
             //? 문자열의 포맷이 DateTime과 다를 경우?
             String diagnosis = getInput("진단명을 입력하세요");
-            String treatment = getInput("처방 내용을 입력하세요.");
+            String treatment = getInput("처방 내용을 입력하세요");
 
             dto = new RecordCreateRequestDto(patientId, dateOfVisit, diagnosis, treatment);
 

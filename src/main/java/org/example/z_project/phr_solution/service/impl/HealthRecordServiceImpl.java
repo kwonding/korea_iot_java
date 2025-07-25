@@ -99,13 +99,26 @@ public class HealthRecordServiceImpl implements HealthRecordService {
     }
 
     @Override
-    public void deleteRecord(Long id) {
+//    public void deleteRecord(Long id) {
+//        try {
+//            HealthRecord record = recordRepository.findById(id)
+//                    .orElseThrow(()-> new IllegalArgumentException("해당 ID의 건강 기록이 존재하지 않습니다." + id));
+//            recordRepository.delete(record);
+//        } catch(Exception e) {
+//            System.out.println(e.getMessage());
+//        }
+//    }
+
+    public boolean deleteRecord(Long id) {
         try {
             HealthRecord record = recordRepository.findById(id)
                     .orElseThrow(()-> new IllegalArgumentException("해당 ID의 건강 기록이 존재하지 않습니다." + id));
             recordRepository.delete(record);
+            return true;
+
         } catch(Exception e) {
             System.out.println(e.getMessage());
+            return false;
         }
     }
 }

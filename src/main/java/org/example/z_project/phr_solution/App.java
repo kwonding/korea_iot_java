@@ -129,7 +129,11 @@ public class App {
             }
             case 9: {
                 long id = InputHandler.getIdInput();
-                healthRecordController.deleteRecord(id);
+                boolean deleted = healthRecordController.deleteRecord(id);
+                if (deleted) {
+                    System.out.println("삭제가 완료되었습니다.");
+                }
+//                healthRecordController.deleteRecord(id); - void 일때
                 break;
             }
             case 10: {

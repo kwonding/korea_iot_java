@@ -9,5 +9,6 @@ public interface HealthRecordService {
     void createRecord(RecordCreateRequestDto dto);
     List<RecordListResponseDto> getAllRecords();
     List<RecordListResponseDto> filterRecordsByDiagnosis(String diagnosis);
-    void deleteRecord(Long id);
+//    void deleteRecord(Long id);
+    boolean deleteRecord(Long id);
 }

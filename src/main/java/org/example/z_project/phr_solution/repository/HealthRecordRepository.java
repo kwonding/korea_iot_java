@@ -13,7 +13,7 @@ public class HealthRecordRepository {
     private HealthRecordRepository() {}
 
     public static HealthRecordRepository getInstance() {
-        return null;
+        return instance;
     }
 
     public void save(HealthRecord record) {
