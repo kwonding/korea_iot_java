@@ -29,7 +29,7 @@ public class PatientController {
         PatientDetailResponseDto result = patientService.getPatientById(id);
         return result;
     }
-    public void updatePataient(Long id, PatientUpdateRequestDto dto) {
+    public void updatePatient(Long id, PatientUpdateRequestDto dto) {
         patientService.updatePatient(id, dto);
     }
 
